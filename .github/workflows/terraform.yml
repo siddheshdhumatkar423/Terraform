@@ -15,6 +15,9 @@ jobs:
 
       - name: Set up Terraform
         uses: hashicorp/setup-terraform@v1
+       - name: Set up Terraform
+       run: sudo apt-get update && sudo apt-get install -y unzip
+
 
       - name: Run terraform fmt check
         run: terraform fmt -check
