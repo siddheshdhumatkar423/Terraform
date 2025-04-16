@@ -27,8 +27,8 @@ jobs:
 
       - name: Terraform Format Check
         run: terraform fmt -check- 
-        -name: Format Terraform files
-          run: terraform fmt -recursive
+        run: terraform fmt -recursive
+         
           
           
 
