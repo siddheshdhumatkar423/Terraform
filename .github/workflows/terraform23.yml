@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-  
 
 jobs:
   terraform:
@@ -14,26 +13,19 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+
       - name: Install Node.js
-        run:   |
+        run: |
           curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
           sudo apt-get install -y nodejs
-
 
       - name: Set up Terraform
         uses: hashicorp/setup-terraform@v3
         with:
-          terraform_version: 1.5.7 # change as needed
+          terraform_version: 1.5.7
 
       - name: Terraform Format Check
-        run: terraform fmt -check
-         -name: Check Terraform formatting
-           run: terraform fmt -check -recursive
-
-       
-         
-          
-          
+        run: terraform fmt -check -recursive
 
       - name: Terraform Init
         run: terraform init
