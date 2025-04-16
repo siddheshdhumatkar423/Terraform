@@ -26,9 +26,11 @@ jobs:
           terraform_version: 1.5.7 # change as needed
 
       - name: Terraform Format Check
-        run: terraform fmt -check
-          main.tf
-
+        run: terraform fmt -check- 
+        -name: Format Terraform files
+          run: terraform fmt -recursive
+          
+          
 
       - name: Terraform Init
         run: terraform init
