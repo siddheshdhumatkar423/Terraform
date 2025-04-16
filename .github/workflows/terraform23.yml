@@ -24,6 +24,8 @@ jobs:
 
       - name: Terraform Format Check
         run: terraform fmt -check
+          main.tf
+        terraform.tfvars
 
       - name: Terraform Init
         run: terraform init
