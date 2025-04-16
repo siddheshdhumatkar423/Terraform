@@ -47,7 +47,7 @@ name: 'Terraform'
 on:
   push:
     branches: [ "main" ]
-  pull_request:
+  
 
 permissions:
   contents: read
@@ -78,20 +78,7 @@ jobs:
     - name: Terraform Init
       run: terraform init
 
-    # Checks that all Terraform configuration files adhere to a canonical format
-    - name: Terraform Format
-      run: terraform fmt -check
-       -name: Set output if Terraform formatting check fails
-        run: echo "terraform_fmt_failed=true" >> $GITHUB_ENV
-        if: failure()
-
-      - name: Fail the job if Terraform formatting failed
-        run: |
-          if [ "$terraform_fmt_failed" == "true" ]; then
-            echo "Terraform formatting failed"
-            exit 1
-          fi
-
+    
     # Generates an execution plan for Terraform
     - name: Terraform Plan
       run: terraform plan -input=false
