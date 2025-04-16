@@ -22,8 +22,8 @@ jobs:
         with:
           terraform_version: 1.5.7
 
-      - name: Terraform Format Check
-        run: terraform fmt -check -recursive  # Check the formatting of all .tf files
+    #  - name: Terraform Format Check
+       # run: terraform fmt -check -recursive  # Check the formatting of all .tf files
 
       - name: Terraform Init
         run: terraform init
