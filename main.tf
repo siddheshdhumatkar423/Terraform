@@ -5,7 +5,7 @@ module "dev-demo-app" {
   instance_type   = "t2.micro"
   ami_id          = "ami-084568db4383264d4"
   instance_name   = "demo-instance"
-  bucket_name     = "demo-bucket"
+  bucket_name     = "demo-bucket098"
   demo_table_name = "demo-table"
 }
 
@@ -16,7 +16,7 @@ module "QA-demo-app" {
   instance_type   = "t2.small"
   ami_id          = "ami-071226ecf16aa7d96"
   instance_name   = "demo-instance"
-  bucket_name     = "demo-bucket"
+  bucket_name     = "demo-bucket098"
   demo_table_name = "demo-table"
 }
 
@@ -27,7 +27,7 @@ module "prd-demo-app" {
   instance_type   = "t2.medium"
   ami_id          = "ami-0c15e602d3d6c6c4a"
   instance_name   = "demo-instance"
-  bucket_name     = "demo-bucket"
+  bucket_name     = "demo-bucket098"
   demo_table_name = "demo-table"
 }
 
